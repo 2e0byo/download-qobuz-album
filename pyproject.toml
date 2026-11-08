@@ -1,0 +1,29 @@
+[project]
+name = "download-qobuz-album"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "John Morris", email = "2e0byo@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "backoff>=2.2.1",
+    "beautifulsoup4>=4.15.0",
+    "httpx2>=2.16.0",
+    "ipython>=9.18.1",
+    "tqdm>=4.70.1",
+    "typer>=0.28.0",
+]
+
+[project.scripts]
+download-qobuz-album = "download_qobuz_album:app"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.4",
+]
